@@ -1,0 +1,23 @@
+insert into countries (name) values ('peru') , ('guatemla'), ('francia'), ('mexico'), ('canada');
+select * from countries;
+
+insert into priorities (type_name) values ('urgente') , ('normal'), ('importante');
+select * from priorities;
+
+insert into contact_request (id_email, id_country, id_priority, name, detail, physical_address) 
+values ('a','1','1','agente1', 'latinoamerica', 'capital');
+select * from contact_request;
+
+insert into contact_request (id_email, id_country, id_priority, name, detail, physical_address) 
+values ('b','2','2','agente2', 'europa', 'estado');
+select * from contact_request;
+
+insert into contact_request (id_email, id_country, id_priority, name, detail, physical_address) 
+values ('c','3','3','agente3', 'norte america', 'zona');
+select * from contact_request;
+
+delete from contact_request where id_email = 'c';
+select * from contact_request;
+
+update contact_request set detail = 'asia',name = 'Admin' where id_email = 'a';
+select * from contact_request;
